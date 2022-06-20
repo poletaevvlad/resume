@@ -1,0 +1,10 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "main": "base.pug",
+  "scripts": {},
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.52.3"
+  }
+}
