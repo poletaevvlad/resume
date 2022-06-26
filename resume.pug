@@ -1,3 +1,139 @@
 header
-  .name Vlad Polietaiev
-  .subtitle Software Engineer
+  .title
+    h1.name Vlad Polietaiev
+    .subtitle Software Engineer
+
+  ul.contacts
+    li.linkedin 
+      a(href="https://www.linkedin.com/in/poletaevvlad/") 
+        | linkedin.com/in/poletaevvlad
+    li.github
+      a(href="https://github.com/poletaevvlad")
+        | github.com/poletaevvlad
+    li.email
+      a(href="mailto:poletaev.vladislav@gmail.com")
+        | poletaev.vladislav@gmail.com
+    li.telegram
+      | #[span.label Telegram:] #[a(href="https://t.me/poletaevvlad") @poletaevvlad]
+    li.location
+      | #[span.label Location:] Ukraine, Remote only
+
+p.summary
+  | A software engineer with 1+ year of commercial experience developing REST APIs and back end services mainly with Python-based technology stack with a passion for programming both professionally and independently. Looking for an opportunity to apply and develop my skills while working on an interesting and impactful projects.
+
+section
+  h2 Professional experience
+
+  section.employment
+    .info
+      h3 Software Developer #[span.conj at] DevelopsToday
+      .dates May 2021&ndash;Present, Fully remote
+    ul.responsibilities
+      li Participaded in the development of Django Rest Framework application, 
+        | maintained Stripe payments workflow, SendBird integration
+      li Designed, developed, and tested REST APIs endpoints using FastAPI on 
+        | multiple projects
+      li Participated in the development of back end and front end components 
+        | of a Firebase application, maintained and improved performance of the 
+        | data synchronization workflow with a third party API
+      li Developed and optimized the Web scrapping and data extraction 
+        | workflows on top of Google Cloud Functions
+      li Implemented a data replication pipeline for ElasticSearch and a 
+        | recommendation engine on top of it
+      li Participated in internal interviewing/hiring processes, mentored a 
+        | junior developer
+
+section
+  h2 Personal projects
+
+  div.projects-list
+    section.project
+      .info
+        h3 Hedgehog
+      .description A podcast player and organizer with a termi&shy;nal-based user interface written in Rust. It implements subscription management, automatic feed updates, searching in iTunes Store, tracking playback status and position.
+      nav.links
+        ul
+          li #[a(href="https://github.com/poletaevvlad/Hedgehog") #[span.icon.github]/poletaevvlad/Hedgehog]
+
+    section.project
+      .info
+        h3 cmdparse
+      .description A Rust library and derive macro for parsing arbitrary types 
+        | from commands strings with autocompletion 
+        | support based on the parser combinator approach.
+      nav.links
+        ul
+          li #[a(href="https://docs.rs/cmdparse") #[span.icon.docsrs] Docs]
+          li #[a(href="https://github.com/poletaevvlad/cmdparse") #[span.icon.github]/poletaevvlad/cmdparse]
+
+    section.project
+      .info
+        h3 anime-list-popup
+      .description A browser extension for viewing and managing the users&apos; lists of TV series they watched or plan to watch from myanimelist.net writtern in TypeScript/React. 
+      nav.links
+        ul
+          li #[a(href="https://chrome.google.com/webstore/detail/anime-list-popup/glabhkacodgkcgnbccfkjhlkolcidkdo") #[span.icon.chrome]]
+          li #[a(href="https://addons.mozilla.org/en-US/firefox/addon/anime-list-popup/" title="Firefox Add-ons") #[span.icon.firefox]]
+          li #[a(href="https://github.com/poletaevvlad/anime-list-popup" title="Chrome Web Store") #[span.icon.github]/poletaevvlad/anime-list-popup]
+
+   
+    section.project
+      .info
+        h3 http-asm
+      .description A web server, written in x86-64 assembly for GNU/Linux without dependencies (including libc). It implements a subset of HTTP 1.0 spec and supports directory listing.
+      nav.links
+        ul
+          li #[a(href="https://github.com/poletaevvlad/http-asm") #[span.icon.github]/poletaevvlad/http-asm]
+
+section
+  h2 Skills
+  .skills
+    .label Languages & Technologies:
+    ul
+      li Python (FastAPI, Django, SqlAlchemy, Alembic)
+      li Rust
+      li RabbitMQ
+      li OpenCL
+
+  .skills
+    .label Databases: 
+    ul
+      li PostgreSQL
+      li MongoDB
+      li Google Firestore
+      li ElasticSearch
+      li SQLite
+      li Redis
+
+  .skills
+    .label Devops:
+    ul
+      li Google Cloud Platform (Cloud Functions, Firestore, Storage)
+      li AWS (S3, Lambda)
+      li Heroku
+      li Docker
+
+  .skills
+    .label Front end:
+    ul
+      li JS/Typescript
+      li React
+      li HTML, CSS
+      li Flutter
+      li JavaFX
+
+  .skills.separated
+    .label Languages:
+    ul
+      li Ukrainian, Russian (native)
+      li English (professional working proficiency)
+
+
+section
+  h2 Education
+  .info
+    h3 Donetsk National Technical Universty, Donetsk, Ukraine
+    .dates Sep 2014&ndash;Jun 2020
+  .description Master&apos;s degree in #[em Software Enginieering], master's thesis in the field of content-based image retrieval.
+
+  

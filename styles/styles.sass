@@ -1,8 +1,192 @@
+@use "sass:color"
+@import "_reset"
+
+$accent: #216e7d
+
 body
-  background-color: black
-  color: white
-  margin: 0
+  margin: 0 1cm
   padding: 0
+  font-family: "Noto Sans"
+  line-height: 1.5em
+  font-size: 9.5pt
+
+header
+  background-color: #f2f2f2
+  padding: 1cm 1cm 8mm
+  margin: 0 -1cm 6mm
+  background-color: color.scale($accent, $lightness: -30%)
+  display: flex
+  align-items: center
+
+  .title
+    white-space: nowrap
+
+  .name
+    color: white
+    font-size: 1.5rem
+    font-weight: 600
+    line-height: 1.5em
+  
+  .subtitle
+    color: white
+    font-size: 1rem
+    font-weight: 400
+    line-height: 1.3em
+
+  .contacts
+    margin-left: 3cm
+    columns: 2
+    flex: 1 1
+
+    li, a
+      line-height: 1.6em
+      color: white
+
+    .label
+      font-style: italic
+      font-size: 0.9em
+
+.summary
+  font-size: 1.1em
+  line-height: 1.5em
+
+a
+  color: $accent
+  text-decoration: none
+
+body > section
+  padding-left: 2mm
+  margin-top: 3mm
+
+  h2
+    margin-left: -2mm
+    color: $accent
+    font-size: 1.1rem
+    line-height: 1.5em
+    font-weight: 600
+    position: relative
+    margin-bottom: 3mm
+    border-bottom: 2pt solid $accent
+
+  &.small h2
+    font-size: 1rem
+    border-bottom-width: 1pt
+    margin-bottom: 0.5mm
+    font-weight: 500
+
+  section
+    margin-bottom: 4mm
+
+  h3
+    font-weight: 500
+    font-size: 1.2em
+    line-height: 1.3em
+    margin-bottom: 1mm
+
+    .conj
+      font-weight: normal
+
+  &.small h3
+    font-size: 1em
+    margin-bottom: 0.5mm
+
+  .info
+    display: flex
+  
+    h3
+      flex: 1 1
+    .dates
+      float: right
+      color: #444
+
+  ul
+    list-style: circle
+    margin: 0 0 1mm 8mm
+
+    li
+      margin-bottom: 0.5mm
+
+.projects-list
+  columns: 2
+  column-gap: 6mm
+  margin-bottom: -5mm
+
+  .project
+    display: inline-block
+
+  .description
+    hyphens: auto
+
+$skills-offset: 2.2cm
+.skills
+  padding-left: $skills-offset
+  margin-bottom: 0.5mm
+
+  &.separated
+    margin-top: 3mm
+
+  .label
+    margin-left: -$skills-offset
+    display: inline-block
+    min-width: $skills-offset - 3mm
+    font-weight: 500
+    margin-right: 3mm
+
+  ul
+    list-style: none
+    margin: 0
+    display: inline
+
+    li
+      display: inline
+
+      &::after
+        content: "·"
+        padding: 0 1.75mm
+        color: #444
+
+      &:last-child::after
+        display: none
+
+.links
+  margin-top: 1mm
+
+  ul
+    margin: 0
+    list-style: none
+    text-align: right
+
+    li
+      display: inline
+
+      &::before
+        content: "·"
+        padding: 0 2.25mm
+        color: #444
+      
+      &:first-child
+        &::before
+          display: none
+
+.icon
+  width: 1.2em
+  height: 1.2em
+  display: inline-block
+  background-size: contain
+  background-repeat: no-repeat
+  transform: translateY(0.2em)
+
+  @each $icon in "github", "chrome", "firefox", "docsrs"
+    &.#{$icon}
+      background-image: url(../icons/#{$icon}.svg)
+
+.footer
+  background-color: color.scale($accent, $lightness: -30%)
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  height: 4mm
 
 @page
   size: A4

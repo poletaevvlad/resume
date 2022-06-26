@@ -3,7 +3,8 @@ resume.pdf: _build/base.html _build/styles.css
 		--print-to-pdf=$(shell pwd)/resume.pdf \
 		--print-to-pdf-no-header \
 		--run-all-compositor-stages-before-draw \
-		--virtual-time-budget=20000 \
+		--virtual-time-budget=100000 \
+		--allow-file-access-from-files \
 		./_build/base.html
 
 _build/base.html: base.pug resume.pug
@@ -17,7 +18,7 @@ _build/styles.css: $(wildcard styles/*.sass)
 %PHONY: watch
 watch: resume.pdf
 	while true; do \
-		inotifywait -e close_write *.pug styles/*.sass;\
+		inotifywait -e close_write *.pug styles/*.sass icons/*.svg;\
 		make;\
 	done
 
