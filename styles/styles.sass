@@ -10,6 +10,9 @@ body
   line-height: 1.5em
   font-size: 9.5pt
 
+em
+  font-style: italic
+
 header
   background-color: #f2f2f2
   padding: 1cm 1cm 8mm
@@ -109,10 +112,6 @@ body > section
 .projects-list
   columns: 2
   column-gap: 6mm
-  margin-bottom: -5mm
-
-  .project
-    display: inline-block
 
   .description
     hyphens: auto
@@ -120,10 +119,9 @@ body > section
 $skills-offset: 2.2cm
 .skills
   padding-left: $skills-offset
-  margin-bottom: 0.5mm
 
   &.separated
-    margin-top: 3mm
+    margin-top: 1.5mm
 
   .label
     margin-left: -$skills-offset
